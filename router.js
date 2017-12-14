@@ -16,6 +16,7 @@ module.exports = function (app) {
     postRoutes.get('/posts', postController.getPosts);
     postRoutes.get('/posts/:postId', postController.getSinglePost);
     commentRoutes.get('/comments/:postId', commentsController.getAllComments);
+    commentRoutes.get('/comments/comment/:commentId', commentsController.getOneComment);
 
     postRoutes.put('/posts/:postId', postController.updatePost);
     commentRoutes.put('/comments/:commentId', commentsController.updateComment);
